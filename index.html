@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prisantoh's fast food</title>
+  <!-- Link for the icon -->
+
+  <link rel="icon" href="images/egusi 2.png">
+  <!-- Google Fonts API -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Asap+Condensed&family=Jost&family=Kanit&family=Noto+Sans+Display:wght@600&family=PT+Sans+Narrow&family=Slabo+27px&family=Ubuntu:wght@500&display=swap');
+  </style>
+  <!-- for second font "dancing Script" -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Asap+Condensed&family=Dancing+Script&family=Jost&family=Kanit&family=Noto+Sans+Display:wght@600&family=PT+Sans+Narrow&family=Slabo+27px&family=Ubuntu:wght@500&display=swap');
+  </style>
+
+  <!-- BootStrap Link  CSS-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <!-- customised CSS -->
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="loader"> 
+    </div>
+    <span id="spanText">Please Wait....</span>
+
+  </header>
+  <!-- Main Container -->
+  <div class="container-main">
+    <!-- For Animation -->
+    
+    <!-- for menu section -->
+    <div class="menu" onclick="closeOrderBox()">
+      <h2 class="logo">Prisantoh's fast food</h2>
+      <!-- code for navbarIcon  -->
+      <div class="navButtons">
+        <i class="fa-solid fa-xmark " id="closeNavs"></i>
+        <i class="fa-solid fa-burger" id="openNavs"></i>
+      </div>
+      <!-- for nav-links PRIMARY specifically designed to show only on the mobile screens -->
+      <div class="nav-links">
+        <ul>
+          <li><a href="#home" class="Active-Link nav-1">Home</a></li>
+          <li><a href="#menu" class="nav-2">Menu</a></li>
+          <li><a href="#about" class="nav-3">About</a></li>
+          <li><a href="#bookTable" class="nav-4">Book Table</a></li>
+          <li><a href="accoutnlogin.html"><button id="register">log in</button></a></li>
+        </ul>
+      </div>
+      <!-- For Nav-Links SECONDARY specifically designed to show on the desktop or Large Screens only-->
+      <div class="nav-linksSecondary">
+        <ul>
+          <li><a href="#home" class="Active-Link nav-1">Home</a></li>
+          <li><a href="#menu" class="nav-2">Menu</a></li>
+          <li><a href="#about" class="nav-3">About</a></li>
+          <li><a href="#bookTable" class="nav-4">Book Table</a></li>
+          <li><a href="accoutnlogin.html" target="_blank"><button id="register">log in</button></a>
+            <!-- <p class="userNameContainer" style="position: relative; left: -15px; top: 5px;"></p> -->
+          </li>
+        </ul>
+      </div>
+      <!-- For Nav-Links Secondary -->
+    </div>
+    <!-- Home Section -->
+    <section id="home">
+      <div class="imageContainerBg">
+        <img src="images/bg2.png" alt="" class="backgroundImg">
+      </div>
+      <!-- For the Order Online Container -->
+      <div class="makeOrder">
+        <div class="innerContentsForm">
+                  <div class="close">
+                    <i class="fa-solid fa-xmark " id="closeOrderForm"></i>
+                  </div>
+          <h2 class="head"></h2>Prisantoh's fast food Order Form <br> Free and fast</h2>
+          <form action="" id="order" autocomplete="on">
+            <!-- for name container -->
+            <div class="orderName">
+              <label for="name-food" class="labels">Name:</label> <br>
+                <input type="text" autocomplete="family-name" placeholder="First" id="name-food" required>
+              <input type="text" autocomplete="name" placeholder="Last" id="name-food" required>
+            </div>
+            <!-- For Purchaser's Email Container -->
+            <div class="purchaseEmail">
+              <label for="purchaser-email" class="labels">Purchaser's Email</label> <br>
+              <input type="email" autocomplete="email" placeholder="Your Email" id="purchaser-email" required>
+            </div>
+            <!-- For delievery phone  container  -->
+            <div class="phoneOrder">
+              <label for="delievery-phone" class="labels">Your Phone:</label> <br>
+              <input type="tel" autocomplete="tel" id="delievery-phone" placeholder="+234 XXX XXX XX" required>
+            </div>
+            <!-- for delivery address container -->
+            <div class="delievryAddress">
+              <label for="delievery-address" class="labels">Delivery Address:</label> <br>
+              <input type="text" autocomplete="address-line1" id="delievery-address" placeholder="Street Address" required> <br>
+              <input type="text" autocomplete="address-line2" id="delievery-address" placeholder="Street Address Line 2">
+            </div>
+            <div class="cityAddress">
+              <input type="text" autocomplete="street-address" id="city-order" placeholder="City" required>
+              <input type="text" autocomplete="state" id="city-order" placeholder="Region/State">
+            </div>
+            <div class="postalcode">
+              <input type="text" autocomplete="postal-code" id="zip-code" placeholder="Postal/Zip Code">
+              <input list="Country-order" placeholder="Country" id="zip-code" required />
+              <datalist id="Country-order">
+                <option value="South Africa "></option>
+                <option value="Nigeria "></option>
+                <option value="Canada "></option>
+                <option value="Switzerland"></option>
+                <option value="Denmark"></option>
+                <option value="UK"></option>
+                <option value="Other"></option>
+              </datalist>
+            </div>
+
+          
+          <!-- For the foods in ordering -->
+          <div class="foodNamestoOrder">
+            <div class="food-1Order">
+              <input type="checkbox" name="" id="">
+              <img src="images/okro soup main.png" alt="" class="okro-order-food">
+             <div class="orderTexts">
+              <p>Okro Soup</p>
+              <p><i class="fa-solid fa-naira-sign">2, 500</i></p>
+              <p>
+                <label for="QuantityOf-Foods">Quantity</label> <br>
+                <input type="number">
+              </p>
+             </div>
+            </div>
+            <!-- Food order 2 -->
+            <div class="food-2Order">
+              <input type="checkbox" name="" id="">
+              <img src="images/egusi 2.png" alt="" class="okro-order-food">
+              <div class="orderTexts">
+                <p>Egusi Soup</p>
+                <p><i class="nigeria in South Africa">3, 500</i></p>
+                <p>
+                  <label for="QuantityOf-Foods">Quantity</label> <br>
+                  <input type="number">
+                </p>
+              </div>
+            </div>
+            <!-- Food order 3 -->
+            <div class="food-3Order">
+              <input type="checkbox" name="" id="">
+              <img src="images/egg sauce 3.png" alt="" class="okro-order-food">
+             <div class="orderTexts">
+              <p>Egg Sauce</p>
+              <p><i class="fa-solid fa-rand-sign">200</i></p>
+              <p>
+                <label for="QuantityOf-Foods">Quantity</label> <br>
+                <input type="number">
+              </p>
+             </div>
+            </div>
+              <!-- Food order 4 -->
+              <div class="food-4Order">
+                <input type="checkbox" name="" id="">
+                <img src="images/fried rice 2.png" alt="" class="okro-order-food">
+              <div class="orderTexts">
+                  <p>Fried Rice</p>
+                  <p><i class="fa-solid fa-rand-sign">120</i></p>
+                  <p>
+                    <label for="QuantityOf-Foods">Quantity</label> <br>
+                    <input type="number">
+                  </p>
+              </div>
+              </div>
+          </div>
+          <div class="sub">
+            <button type="submit" class="submit">Make Order</button>
+          </div>
+          </form>
+        </div>
+      </div>
+      <!-- carousel -->
+      <div class="carouselContainer">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1" id="carouselButtonHome"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"
+              id="carouselButtonHome"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"
+              id="carouselButtonHome"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <h2>Prisantoh's fast food <br> Fast Food Restaurant</h2>
+              <p>
+                WELCOME.... Explore the beauty and serene arena of our reataurant.. <br> We offer the best sales and
+                affordable Nigerian  foods in South Africa.
+                This is a place to call your home. <br> As a South Africans based reaturant, we are happy to let you taste the
+                sweet aroma of our food.
+              </p>
+              <button class="orderBtn" >
+                Order Online
+              </button>
+            </div>
+            <div class="carousel-item">
+              <h2>Prisantoh's fast food <br> Fast Food Restaurant</h2>
+              <p>
+                WELCOME.... Explore the beauty and serene arena of our reataurant.. <br> We offer the best sales and
+                affordable Nigerian food in South Africa.
+                This is a place to call your home. <br> As a South African  based reaturant, we are happy to let you taste the
+                sweet aroma of our food.
+              </p>
+              <button class="orderBtn" >
+                Order Online
+              </button>
+            </div>
+            <div class="carousel-item">
+              <h2>La Hot <br> Fast Food Restaurant</h2>
+              <p>
+                WELCOME.... Explore the beauty and serene arena of our reataurant.. <br> We offer the best sales and
+                affordable foods in South Africa.
+                This is a place to call your home. <br> As a South African based reaturant, we are happy to let you taste the
+                sweet aroma of our food.
+              </p>
+              <button class="orderBtn" >
+                Order Online
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Menu Section -->
+
+    <section id="menu" onclick="closeOrderBox()">
+      <h2 class="titleHeadre">Our Menu</h2>
+      <div class="foodsContent">
+        <button id="forAllFoods">All</button>
+        <button id="EgusiBtn">Egusi Soup</button>
+        <button id="OkroBtn">Okro Soup</button>
+        <button id="AmalaBtn">Amala & Ewedu Meal</button>
+        <button id="MeatPieBtn">Meat Pie</button>
+        <button id="FRiedRiceBtn">Fried Rice</button>
+        <button id="EggSauceBtn">Egg Sauce</button>
+
+      </div>
+      <div class="foodNames">
+        <!-- for all the foods container -->
+        <!-- This container contains all the availabel foods -->
+        <div class="AllFoods">
+          <div class="cardsforFood">
+            <div class="foodcard1">
+              <div class="cardup">
+                <img src="images/fried rice 2.png" alt="">
+              </div>
+              <div class="cardDown">
+                <h3>Delicious Fried Rice</h3>
+                <p>Dont miss the blessed taste of our Fried Rice <br> A food you are not going to compare with
+                  another</p>
+                <div class="inner">
+                  <i class="fa-solid fa-rand-sign">70</i>
+                  <i class="fa-solid fa-cart-plus"></i>
+                </div>
+              </div>
+            </div>
+            <!-- food 2 -->
+            <div class="foodcard2">
+              <div class="cardup">
+                <img src="images/okro soup 4.png" alt="">
+              </div>
+              <div class="cardDown">
+                <h3>Delicious Okro Soup</h3>
+                <p>Dont miss the blessed taste of our Okro<br> A food you are not going to compare with another</p>
+                <div class="inner">
+                  <i class="fa-solid fa-rand-sign">100</i>
+                  <i class="fa-solid fa-cart-plus"></i>
+                </div>
+              </div>
+            </div>
+            <!-- food 3 -->
+            <div class="foodcard3">
+              <div class="cardup">
+                <img src="images/egusi 1.png" alt="">
+              </div>
+              <div class="cardDown">
+                <h3>Delicious Egusi Soup</h3>
+                <p>Dont miss the blessed taste of our Egusi Soup <br> A food you are not going to compare with another
+                </p>
+                <div class="inner">
+                  <i class="fa-solid fa-rand-sign">140</i>
+                  <i class="fa-solid fa-cart-plus"></i>
+                </div>
+              </div>
+            </div>
+            <!-- food 4 -->
+            <div class="foodcard4">
+              <div class="cardup">
+                <img src="images/egusi 2.png" alt="">
+              </div>
+              <div class="cardDown">
+                <h3>Delicious Egusi Soup</h3>
+                <p>Dont miss the blessed taste of our Egusi Soup <br> A food you are not going to compare with another
+                </p>
+                <div class="inner">
+                  <i class="fa-solid fa-rand-sign">170</i>
+                  <i class="fa-solid fa-cart-plus"></i>
+                </div>
+              </div>
+            </div>
+            <!-- food 5 -->
+            <div class="foodcard5">
+              <div class="cardup">
+                <img src="images/egg sauce 1.png" alt="">
+              </div>
+              <div class="cardDown">
+                <h3>Delicious Egg Sauce</h3>
+                <p>Dont miss the blessed taste of our Egg Sauce <br> A food you are not going to compare with another
+                </p>
+                <div class="inner">
+                  <i class="fa-solid fa-rand-sign">60</i>
+                  <i class="fa-solid fa-cart-plus"></i>
+                </div>
+              </div>
+            </div>
+            <!-- food 6 -->
+            <div class="foodcard7">
+              <div class="cardup">
+                <img src="images/egg sauce 3.png" alt="">
+              </div>
+              <div class="cardDown">
+                <h3>Delicious Egg Sauce</h3>
+                <p>Dont miss the blessed taste of our Egg Sauce <br> A food you are not going to compare with another
+                </p>
+                <div class="inner">
+                  <i class="fa-solid fa-rand-sign">120</i>
+                  <i class="fa-solid fa-cart-plus"></i>
+                </div>
+              </div>
+            </div>
+            <!-- food 7 -->
+            <div class="foodcard7">
+              <div class="cardup">
+                <img src="images/meat pie 1.png" alt="">
+              </div>
+              <div class="cardDown">
+                <h3>Delicious Meat Pie</h3>
+                <p>Dont miss the blessed taste of our Meat Pie <br> A food you are not going to compare with another</p>
+                <div class="inner">
+                  <i class="fa-solid fa-rand-sign">89</i>
+                  <i class="fa-solid fa-cart-plus"></i>
+                </div>
+              </div>
+            </div>
+            <!-- food 8 -->
+            <div class="foodcard8">
+              <div class="cardup">
+                <img src="images/dry meats bg.png" alt="">
+              </div>
+              <div class="cardDown">
+                <h3>Delicious Dry Meat</h3>
+                <p>Dont miss the blessed taste of our Dry Meat <br> A food you are not going to compare with another</p>
+                <div class="inner">
+                  <i class="fa-solid fa-rand-sign">180</i>
+                  <i class="fa-solid fa-cart-plus"></i>
+                </div>
+              </div>
+            </div>
+            <!-- food card 9 -->
+            <div class="foodcard9">
+              <div class="cardup">
+                <img src="images/bg1.png" alt="">
+              </div>
+              <div class="cardDown">
+                <h3>Delicious Chicken Jollof Rice</h3>
+                <p>Dont miss the blessed taste of our Chicken Jollof Rice <br> A food you are not going to compare with
+                  another</p>
+                <div class="inner">
+                  <i class="fa-solid fa-rand-sign">200</i>
+                  <i class="fa-solid fa-cart-plus"></i>
+                </div>
+              </div>
+            </div>
+            <!-- food card 10 -->
+            <div class="foodcard10">
+              <div class="cardup">
+                <img src="images/bg2.png" alt="">
+              </div>
+              <div class="cardDown">
+                <h3>Delicious Macaroni Pasta</h3>
+                <p>Dont miss the blessed taste of our Macaroni Pasta <br> A food you are not going to compare with
+                  another</p>
+                <div class="inner">
+                  <i class="fa-solid fa-rand-sign">220</i>
+                  <i class="fa-solid fa-cart-plus"></i>
+                </div>
+              </div>
+            </div>
+            <!-- food card 11 -->
+            <div class="foodcard11">
+              <div class="cardup">
+                <img src="images/okro soup 2.png" alt="">
+              </div>
+              <div class="cardDown">
+                <h3>Delicious Okro Soup</h3>
+                <p>Dont miss the blessed taste of our Chicken Okro Soup <br> A food you are not going to compare with
+                  another</p>
+                <div class="inner">
+                  <i class="fa-solid fa-rand-sign">160</i>
+                  <i class="fa-solid fa-cart-plus"></i>
+                </div>
+              </div>
+            </div>
+            <!-- food card 12 -->
+            <div class="foodcard12">
+              <div class="cardup">
+                <img src="images/amala and ewedu 2.png" alt="">
+              </div>
+              <div class="cardDown">
+                <h3>Delicious Amala & Ewedu Soup</h3>
+                <p>Dont miss the blessed taste of our Amala & Ewedu Soup <br> A food you are not going to compare with
+                  another</p>
+                <div class="inner">
+                  <i class="fa-solid fa-rand-sign">100</i>
+                  <i class="fa-solid fa-cart-plus"></i>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- container for Egusi Soup -->
+        <div class="EgusiSoupSection">
+          <div class="Egusi1">
+            <div class="cardupEgusi">
+              <img src="images//egusi 3.png" alt="">
+            </div>
+            <div class="cardDownEgusi">
+              <h3>Delicious Egusi Soup</h3>
+              <p>Dont miss the blessed taste of our Egusi Soup <br> A food you are not going to compare with another</p>
+              <div class="inner">
+                <i class="fa-solid fa-rand-sign">150</i>
+                <i class="fa-solid fa-cart-plus"></i>
+              </div>
+            </div>
+          </div>
+          <!-- For the second soup -->
+          <div class="Egusi2">
+            <div class="cardupEgusi">
+              <img src="images/egusi 1.png" alt="">
+            </div>
+            <div class="cardDownEgusi">
+              <h3>Delicious Egusi Soup</h3>
+              <p>Dont miss the blessed taste of our Egusi Soup <br> A food you are not going to compare with another</p>
+              <div class="inner">
+                <i class="fa-solid fa-rand-sign">140</i>
+                <i class="fa-solid fa-cart-plus"></i>
+              </div>
+            </div>
+          </div>
+          <!-- for thr third Egusi -->
+          <div class="Egusi3">
+            <div class="cardupEgusi">
+              <img src="images/egusi 2.png" alt="">
+            </div>
+            <div class="cardDownEgusi">
+              <h3>Delicious Egusi Soup</h3>
+              <p>Dont miss the blessed taste of our Egusi Soup <br> A food you are not going to compare with another</p>
+              <div class="inner">
+                <i class="fa-solid fa-rand-sign">170</i>
+                <i class="fa-solid fa-cart-plus"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Container for Okro Soup -->
+
+        <div class="okroSoupSection">
+          <div class="Okro1">
+            <div class="cardupOkro">
+              <img src="images/okro soup 5.png" alt="">
+            </div>
+            <div class="cardDownOkro">
+              <h3>Delicious Okro Soup</h3>
+              <p>Dont miss the blessed taste of our Okro Soup <br> A food you are not going to compare with another</p>
+              <div class="inner">
+                <i class="fa-solid fa-rand-sign">139</i>
+                <i class="fa-solid fa-cart-plus"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- for the second okro soup -->
+          <div class="Okro2">
+            <div class="cardupOkro">
+              <img src="images/okro soup 2.png" alt="">
+            </div>
+            <div class="cardDownOkro">
+              <h3>Delicious Okro Soup</h3>
+              <p>Dont miss the blessed taste of our Okro Soup <br> A food you are not going to compare with another</p>
+              <div class="inner">
+                <i class="fa-solid fa-rand-sign">210</i>
+                <i class="fa-solid fa-cart-plus"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- for the third okro soup -->
+          <div class="Okro3">
+            <div class="cardupOkro">
+              <img src="images/okro soup 1.png" alt="">
+            </div>
+            <div class="cardDownOkro">
+              <h3>Delicious Okro Soup</h3>
+              <p>Dont miss the blessed taste of our Okro Soup <br> A food you are not going to compare with another</p>
+              <div class="inner">
+                <i class="fa-solid fa-rand-sign">250</i>
+                <i class="fa-solid fa-cart-plus"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- for the 4th Okro Soup -->
+          <div class="Okro4">
+            <div class="cardupOkro">
+              <img src="images/okro soup main.png" alt="">
+            </div>
+            <div class="cardDownOkro">
+              <h3>Delicious Okro Soup</h3>
+              <p>Dont miss the blessed taste of our Okro Soup <br> A food you are not going to compare with another</p>
+              <div class="inner">
+                <i class="fa-solid fa-rand-sign">210</i>
+                <i class="fa-solid fa-cart-plus"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Container for Amala & Ewedu Food Section -->
+        <div class="AmalaFoodsSection">
+          <div class="Amala1">
+            <div class="cardupAmala">
+              <img src="images/amala and ewedu 2.png" alt="">
+            </div>
+            <div class="cardDownAmala">
+              <h3>Delicious Amala & Ewedu Meal</h3>
+              <p>Dont miss the blessed taste of our Amala & Ewedu Meal <br> A food you are not going to compare with
+                another</p>
+              <div class="inner">
+                <i class="fa-solid fa-rand-sign">190</i>
+                <i class="fa-solid fa-cart-plus"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- For the 2nd Amala & Ewedu Food -->
+          <div class="Amala2">
+            <div class="cardupAmala">
+              <img src="images/amala and ewedu 1.png" alt="">
+            </div>
+            <div class="cardDownAmala">
+              <h3>Delicious Amala & Ewedu Meal</h3>
+              <p>Dont miss the blessed taste of our Amala & Ewedu Meal <br> A food you are not going to compare with
+                another</p>
+              <div class="inner">
+                <i class="fa-solid fa-rand-sign">180</i>
+                <i class="fa-solid fa-cart-plus"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Container for Meat Pie Section -->
+        <div class="MeatPieFoods">
+          <div class="MeatPie1">
+            <div class="cardupMeatPie">
+              <img src="images//meat pie 3.png" alt="">
+            </div>
+            <div class="cardDowMeatPie">
+              <h3>Delicious Meat Pie</h3>
+              <p>Dont miss the blessed taste of our Meat Pie <br> A food you are not going to compare with
+                another</p>
+              <div class="inner">
+                <i class="fa-solid fa-rand-sign">150</i>
+                <i class="fa-solid fa-cart-plus"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- for the second Meat Pie -->
+          <div class="MeatPie2">
+            <div class="cardupMeatPie">
+              <img src="images//meat pie 1.png" alt="">
+            </div>
+            <div class="cardDowMeatPie">
+              <h3>Delicious Meat Pie</h3>
+              <p>Dont miss the blessed taste of our Meat Pie <br> A food you are not going to compare with
+                another</p>
+              <div class="inner">
+                <i class="fa-solid fa-rand-sign">120</i>
+                <i class="fa-solid fa-cart-plus"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- for the 3rd Meat Pie  -->
+          <div class="MeatPie3">
+            <div class="cardupMeatPie">
+              <img src="images//meat pie 2.png" alt="">
+            </div>
+            <div class="cardDowMeatPie">
+              <h3>Delicious Meat Pie</h3>
+              <p>Dont miss the blessed taste of our Meat Pie <br> A food you are not going to compare with
+                another</p>
+              <div class="inner">
+                <i class="fa-solid fa-rand-sign">50</i>
+                <i class="fa-solid fa-cart-plus"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Container for Fried Rice Section -->
+        <div class="friedRiceSection">
+          <div class="FriedRice1">
+            <div class="cardupFriedRice">
+              <img src="images/fried rice 1.png" alt="">
+            </div>
+            <div class="cardDowFriedRice">
+              <h3>Delicious Fried Rice</h3>
+              <p>Dont miss the blessed taste of our Fried Rice <br> A food you are not going to compare with
+                another</p>
+              <div class="inner">
+                <i class="fa-solid fa-rand-sign" id="price1">150</i>
+                <i class="fa-solid fa-cart-plus" id="calculateRice1"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- for the 2nd fried rice food -->
+          <div class="FriedRice2">
+            <div class="cardupFriedRice">
+              <img src="images/fried rice 2.png" alt="">
+            </div>
+            <div class="cardDowFriedRice">
+              <h3>Delicious Fried Rice</h3>
+              <p>Dont miss the blessed taste of our Fried Rice <br> A food you are not going to compare with
+                another</p>
+              <div class="inner">
+                <i class="fa-solid fa-rand-sign" id="price2">170</i>
+                <i class="fa-solid fa-cart-plus" id="calculateRice2"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- for the 3rd fried rice food -->
+          <div class="FriedRice3">
+            <div class="cardupFriedRice">
+              <img src="images/fried rice 3.png" alt="">
+            </div>
+            <div class="cardDowFriedRice">
+              <h3>Delicious Fried Rice</h3>
+              <p>Dont miss the blessed taste of our Fried Rice <br> A food you are not going to compare with
+                another</p>
+              <div class="inner">
+                <i class="fa-solid fa-rand-sign" id="price3">120</i>
+                <i class="fa-solid fa-cart-plus" id="calculateRice3"></i>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+        <!-- Container for Egg sauce -->
+
+        <div class="eggSauceContainer">
+          <div class="EggSauce1">
+            <div class="cardupEggSauce">
+              <img src="images/sauce bg egg.png" alt="">
+            </div>
+            <div class="cardDowEggSauce">
+              <h3>Delicious Egg Sauce</h3>
+              <p>Dont miss the blessed taste of our Egg Sauce <br> A food you are not going to compare with
+                another</p>
+              <div class="inner">
+                <i class="fa-solid fa-rand-sign">200</i>
+                <i class="fa-solid fa-cart-plus"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- for the 2nd egg sauce food -->
+          <div class="EggSauce2">
+            <div class="cardupEggSauce">
+              <img src="images/egg sauce 1.png" alt="">
+            </div>
+            <div class="cardDowEggSauce">
+              <h3>Delicious Egg Sauce</h3>
+              <p>Dont miss the blessed taste of our Egg Sauce <br> A food you are not going to compare with
+                another</p>
+              <div class="inner">
+                <i class="fa-solid fa-rand-sign">200</i>
+                <i class="fa-solid fa-cart-plus"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- for the 3rd Egg Suace -->
+          <div class="EggSauce3">
+            <div class="cardupEggSauce">
+              <img src="images/egg sauce 3.png" alt="">
+            </div>
+            <div class="cardDowEggSauce">
+              <h3>Delicious Egg Sauce</h3>
+              <p>Dont miss the blessed taste of our Egg Sauce <br> A food you are not going to compare with
+                another</p>
+              <div class="inner">
+                <i class="fa-solid fa-rand-sign">200</i>
+                <i class="fa-solid fa-cart-plus"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- for the 4th Egg Sauce -->
+          <div class="EggSauce4">
+            <div class="cardupEggSauce">
+              <img src="images/egg sauce 4.png" alt="">
+            </div>
+            <div class="cardDowEggSauce">
+              <h3>Delicious Egg Sauce</h3>
+              <p>Dont miss the blessed taste of our Egg Sauce <br> A food you are not going to compare with
+                another</p>
+              <div class="inner">
+                <i class="fa-solid fa-rand-sign">250</i>
+                <i class="fa-solid fa-cart-plus"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- for the 5th Egg Sauce -->
+          <div class="EggSauce5">
+            <div class="cardupEggSauce">
+              <img src="images/egg sauce 5.png" alt="">
+            </div>
+            <div class="cardDowEggSauce">
+              <h3>Delicious Naija Egg Sauce</h3>
+              <p>Dont miss the blessed taste of our Egg Sauce <br> A food you are not going to compare with
+                another</p>
+              <div class="inner">
+                <i class="fa-solid fa-rand-sign">200</i>
+                <i class="fa-solid fa-cart-plus"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <!-- for the about us Container -->
+      <div class="aboutContainerr">
+        <!-- container for the image on the about -->
+        <div class="aboutImg">
+          <img src="images/sauce bg egg.png" alt="">
+        </div>
+        <!-- container for the About us Text -->
+        <div class="aboutText">
+          <h2 class="aboutHeader">We Are Prisantoh's fast food</h2>
+          <p class="aboutInfoText">
+            "Welcome to Prisantoh's fast food resturant <strong>'South Africa's best nigerian Restaurant'</strong> where culinary excellence meets a
+            warm and inviting atmosphere.
+            Discover a symphony of flavors, crafted with passion and precision, in a warm and inviting ambiance. From
+            delectable appetizers to
+            mouthwatering entrees and decadent desserts, our menu celebrates culinary excellence. Join us for a
+            memorable dining experience,
+            where every bite tells a story. Explore our menu, reserve your table, and savor the moment at Prisantoh's fast food
+            Restaurant.
+            Whether you're seeking a romantic dinner, a lively family gathering, or a memorable celebration, our
+            restaurant promises to delight your
+            senses and create lasting memories.
+            Our story began with a dream to provide a place where friends and family could gather over exceptional food
+            and drinks. We've carefully
+            curated a menu that blends traditional and
+            contemporary flavors, resulting in a dining experience that transcends the ordinary.
+            Join us for a gastronomic journey that combines impeccable service with a passion for exceptional food."
+
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Book A Table Section -->
+    <section id="bookTable" onclick="closeOrderBox()">
+      <!-- bookingHeader -->
+      <h2 class="bookingHeader">Reserve A Table Now</h2>
+      <div class="formBookingTable">
+        <form action="" method="post" autocomplete="on">
+          <!-- for name input field -->
+          <div class="nameFied">
+            <label for="YourName"></label>
+            <input type="text" id="YourName" placeholder="Your Name" autocomplete="name"  autocapitalize="name"
+              required>
+          </div>
+          <!-- for phone number input field -->
+          <div class="numberFied">
+            <label for="YourNumber"></label>
+            <input type="tel" id="YourNumber" placeholder="Phone Number" autocomplete="tel" maxlength="15" required>
+          </div>
+          <!-- for email input field -->
+          <div class="emailFied">
+            <label for="YourEmail"></label>
+            <input type="text" id="YourEmail" placeholder="Your Email" autocomplete="email" required>
+          </div>
+          <!-- For booking the number of persons fieled -->
+          <div class="tableNumberFieled">
+            <input list="book-now" placeholder="How Many People?" required />
+            <datalist id="book-now">
+              <option value="1"></option>
+              <option value="3"></option>
+              <option value="4"></option>
+              <option value="7"></option>
+              <option value="8"></option>
+              <option value="10"></option>
+            </datalist>
+          </div>
+          <!-- for the date of booking -->
+          <div class="bookingdateFieled">
+            <label for="dateOfBooking"></label>
+            <input type="datetime-local" id="dateOfBooking" required>
+          </div>
+          <!-- Booking Button -->
+          <button type="submit" id="BookingBtn">
+            Book Now
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- What Our Customer's say Section -->
+    <section id="customers">
+      <h2 class="customerHeader">See What Our Customer's Are Saying</h2>
+      <div class="customerContainer">
+        <!-- For the carousel cintainer -->
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1" id="hideCarousel"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"
+              id="hideCarousel"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"
+              id="hideCarousel"></button>
+          </div>
+          <div class="carousel-inner">
+            <!-- for the first carousel item -->
+            <div class="carousel-item active">
+              <div class="customerCommentsContainer">
+                <p class="customerMsg">
+                  "An evening at Prisantoh's fast food is a sensory symphony of flavors, elegance, and hospitality. From the moment you
+                  step through the door, you're
+                  transported to a world of culinary delight. The menu is a culinary masterpiece,
+                  a carefully orchestrated fusion of innovation and tradition. <br>
+                  <i class="fa-solid fa-star fa-beat"></i><i class="fa-solid fa-star fa-beat"></i>
+                  <i class="fa-solid fa-star fa-beat"></i><i class="fa-solid fa-star fa-beat"></i>
+                  <i class="fa-solid fa-star fa-beat"></i>
+                <aside>
+                  <strong>Nomsa Natha</strong> <br> <i class="fa-solid fa-location-dot fa-beat-fade"></i> Aucklandpark,
+                  Johannesburg
+                </aside>
+                </p>
+              </div>
+              <i class="fa-solid fa-caret-up"></i>
+              <img src="images/miracles image.jpg" alt="..." id="customerImg1">
+            </div>
+            <!-- for the 2nd carousel Item -->
+            <div class="carousel-item">
+              <div class="customerCommentsContainer2">
+                <p class="customerMsg">
+                  "An evening at Prisantoh's fast food is a sensory symphony of flavors, elegance, and hospitality. From the moment you
+                  step through the door, you're
+                  transported to a world of culinary delight. The menu is a culinary masterpiece,
+                  a carefully orchestrated fusion of innovation and tradition. <br>
+                  <i class="fa-solid fa-star fa-beat"></i><i class="fa-solid fa-star fa-beat"></i>
+                  <i class="fa-solid fa-star fa-beat"></i><i class="fa-solid fa-star fa-beat"></i>
+                  <i class="fa-solid fa-star fa-beat"></i>
+                <aside>
+                  <strong>Nomsa Natha</strong> <br> <i class="fa-solid fa-location-dot fa-beat-fade"></i> aucklandpsrl,Johannesburg
+                </aside>
+                </p>
+              </div>
+              <i class="fa-solid fa-caret-up"></i>
+              <img src="images/mira2.jpg" alt="..." id="customerImg2">
+            </div>
+            <!-- for the 3rd carousel item -->
+            <div class="carousel-item">
+              <div class="customerCommentsContainer3">
+                <p class="customerMsg">
+                  "An evening at Prisantoh's fast food is a sensory symphony of flavors, elegance, and hospitality. From the moment you
+                  step through the door, you're
+                  transported to nigeria in a minute. The menu is a culinary masterpiece,
+                  a carefully orchestrated fusion of innovation and tradition. <br>
+                  <i class="fa-solid fa-star fa-beat"></i><i class="fa-solid fa-star fa-beat"></i>
+                  <i class="fa-solid fa-star fa-beat"></i><i class="fa-solid fa-star fa-beat"></i>
+                  <i class="fa-solid fa-star fa-beat"></i>
+                <aside>
+                  <strong>Nomsa Natha</strong> <br> <i class="fa-solid fa-location-dot fa-beat-fade"></i> Aucklandpark, Johannesburg
+                </aside>
+                </p>
+              </div>
+              <i class="fa-solid fa-caret-up"></i>
+              <img src="images/miracles image.jpg" alt="..." id="customerImg3">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- Footer Section -->
+
+    <section id="Footer">
+      <!-- This Div is going to be divided in 3 sections -->
+      <!-- for the parent Footer-Outer container -->
+      <div class="parentFooter">
+        <!-- Container For Contact Us -->
+        <div class="contactUsContainer">
+          <h2 class="contactHeader">Let's Get In Touch</h2>
+          <!-- for location -->
+          <p>
+            <i class="fa-solid fa-location-dot"></i>
+            50 aucklandpark, Johannesburg
+          </p>
+          <!-- for phone contact -->
+          <p>
+            <i class="fa-solid fa-phone-volume fa-shake"></i>
+            <a href="tel:+2710 566 0899">Call +2710 566 0899</a>
+          </p>
+          <!-- for email contact -->
+          <p>
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:  prissfastfood@gmail.com">prissfastfood@gmail.com</a>
+          </p>
+        </div>
+        <!-- Container For Retaurant Info -->
+        <div class="PrisantohFastFoodContainer">
+          <h2 class="PrisantohFastFoodHeadre">Prisantoh</h2>
+          <p class="PrisantohText">
+            "In the heart of Aucklandpark, Johannesburg, a culinary journey was born. <br> Prisantoh's fast food , established in 2002, has a rich
+            history
+            of delighting palates <br> and creating cherished memories. <br> What began as a humble endeavor by
+            <strong>Nomsa Natha</strong> <br> soon evolved into
+            a gastronomic destination renowned <br> for its commitment to quality and innovation."
+          </p>
+        </div>
+        <!-- Container for Opening Hours -->
+        <div class="openingHoursContainer">
+          <h2 class="hoursHeadre">Opening Hours</h2>
+          <p><strong>Monday to Friday</strong>
+          <aside>
+            8:00 Am - 8:30 Pm
+          </aside>
+          </p>
+          <p>
+            <strong>Sundays </strong>
+          <aside>
+            2:00 Pm - 7:30 Pm
+          </aside>
+          </p>
+        </div>
+      </div>
+      <!-- For the Social Media Icons -->
+      <div class="socilaMediaContacts">
+        <!-- LiinkedIn icon-->
+        <a href="http://www.linkedin.com/in/nomsa natha-b582b4237/"><i class="fa-brands fa-linkedin-in"></i></a>
+        <!-- for facebook icon-->
+        <i class="fa-brands fa-facebook-f"></i>
+        <!-- for Instagram icon-->
+        <i class="fa-brands fa-instagram"></i>
+        <!-- for pinterest icon -->
+        <i class="fa-brands fa-pinterest-p"></i>
+        <!-- for twitter icon -->
+        <i class="fa-brands fa-x-twitter"></i>
+      </div>
+
+      <!-- For the Last Message Down -->
+      <div class="Rights">
+        <p> &COPY; 2023 All Rights Reserved By <a href="http://github.com/prisantoh.com" target="_blank"> Nomsa-Tech
+            Coding Projects</a> </p>
+        <p>&COPY; Distributed By <a href="http://github.com/Prisantoh">Nomsa Natha</a></p>
+        <!-- Adding Google Translate Page -->
+        <!-- Adding a google translate API -->
+        <p>You can translate the content of this page below</p>
+        <div id="google_translate_element"></div>
+
+        <script type="text/javascript">
+          function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+          }
+        </script>
+
+        <script type="text/javascript"
+          src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+      </div>
+    </section>
+
+  </div>
+
+
+
+
+
+
+
+  <!-- Bootstrap Link Js -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+  <!-- font-awsome Script -->
+  <script src="https://kit.fontawesome.com/9b5c4c6b23.js" crossorigin="anonymous"></script>
+
+  <!-- custom JS -->
+  <script src="js/index.js"></script>
+</body>
+
+</html>
